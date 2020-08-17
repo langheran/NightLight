@@ -48,7 +48,7 @@ IniRead, Temperature, %A_ScriptDir%\NightLight.ini, Settings, Temperature, 6600
 return
 
 SetTemperature:
-MonitorControl.SetColorTemperature(Temperature, 0.5)
+MonitorControl.SetColorTemperature(Temperature, 0.8) ; 0.5
 RegWrite, REG_BINARY, HKCU\Software\Microsoft\Windows\CurrentVersion\CloudStore\Store\Cache\DefaultAccount\$$windows.data.bluelightreduction.bluelightreductionstate\Current, Data, 02000000079B967A7C49D50100000000434201001000D00A02C614E1BAD9D4C7AFD2EA0100
 CLR := MonitorControl.GetBrightness()
 global MonRed := CLR.Red
