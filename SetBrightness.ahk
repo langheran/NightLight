@@ -3,6 +3,24 @@
 #Warn
 #NoEnv
 #SingleInstance Force
+
+args:=""
+Loop, %0%  ; For each parameter:
+{
+    param := %A_Index%
+	num = %A_Index%
+	args := args . param
+}
+if(args<>"")
+{
+    BAll:=args
+    if BAll is number
+    {
+        Brightness.Set(BAll, BAll, BAll)
+        ExitApp
+    }
+}
+
 SetBatchLines -1
 
 global Reset     := 128
