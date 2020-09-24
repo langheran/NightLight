@@ -3,6 +3,10 @@
 #Warn
 #NoEnv
 #SingleInstance Force
+#Include BrightnessSetter.ahk
+
+bobj := new BrightnessSetter
+bobj.SetBrightness(150, 1, 0) 
 
 args:=""
 Loop, %0%  ; For each parameter:
